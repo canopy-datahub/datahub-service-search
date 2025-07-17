@@ -10,7 +10,7 @@ spring:
     log-resolved-exception: false
 
 server:
-  port: 8080
+  port: 8081
 
 logging:
   level:
@@ -151,7 +151,7 @@ logging:
 
 spring:
   config:
-    import: aws-secretsmanager:application_dev
+    # import: aws-secretsmanager:application_dev
     activate:
       on-profile: dev
 
@@ -159,6 +159,16 @@ management:
   endpoint:
     health:
       show-details: always
+
+opensearch:
+  hostname: ${SEARCH_HOST}
+  port: 9200
+  scheme: http
+  username: ${SEARCH_USERNAME}
+  password: ${SEARCH_PASSWORD}
+  index:
+    studies: study_search
+    autocomplete: study_autocomplete_v001
 
 logging:
   pattern:
