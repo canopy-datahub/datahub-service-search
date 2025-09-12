@@ -53,7 +53,7 @@ query:
     description: 0.75
     subject: 2.0
     data_general_types: 2.0
-    dcc: 0.5
+    center: 0.5
     types: 2.0
     source: 2.0
     topics: 2.0
@@ -89,7 +89,7 @@ query:
     study_variables: 1.0
     multi_center_sites: 0.25
   aggregation-fields:
-    - "dcc"
+    - "center"
     - "source_array"
     - "title"
     - "subject_array"
@@ -104,7 +104,7 @@ query:
   sorting-fields:
     phs: phs.keyword
     title: title.keyword
-    dcc: dcc.keyword
+    center: center.keyword
     relevance: _score
 
 apis:
