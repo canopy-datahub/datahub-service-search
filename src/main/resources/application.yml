@@ -25,16 +25,18 @@ logging:
 management:
   endpoint:
     health:
+      enabled: true
       show-details: never
+    shutdown:
       enabled: true
   health:
     elasticsearch:
       enabled: false
   endpoints:
+    enabled-by-default: false
     web:
       exposure:
-        include: health
-    enabled-by-default: false
+        include: health,shutdown
 
 opensearch:
   hostname: ${opensearch.hostname}
@@ -154,6 +156,10 @@ spring:
     # import: aws-secretsmanager:application_dev
     activate:
       on-profile: dev
+  security:
+    user:
+      name: ${DATAHUB_SPRING_MANAGEMENT_USER}
+      password: ${DATAHUB_SPRING_MANAGEMENT_PASSWORD}
 
 management:
   endpoint:
