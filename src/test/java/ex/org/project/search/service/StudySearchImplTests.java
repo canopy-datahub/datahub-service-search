@@ -2,8 +2,6 @@ package ex.org.project.search.service;
 
 import ex.org.project.search.config.QueryConfiguration;
 import ex.org.project.search.models.OpensearchIndices;
-import ex.org.project.search.service.SearchQueryLogger;
-import ex.org.project.search.service.StudyServiceImpl;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,7 +17,8 @@ import org.springframework.web.client.RestTemplate;
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 
-import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)

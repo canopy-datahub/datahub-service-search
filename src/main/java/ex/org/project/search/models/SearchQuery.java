@@ -2,12 +2,12 @@ package ex.org.project.search.models;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import ex.org.project.search.exceptions.MalformedRequestException;
 import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Data
 public class SearchQuery {

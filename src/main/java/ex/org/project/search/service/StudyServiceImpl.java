@@ -3,13 +3,13 @@ package ex.org.project.search.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ex.org.project.search.exceptions.AdvancedSearchException;
+import com.opencsv.CSVWriter;
 import ex.org.project.search.config.QueryConfiguration;
+import ex.org.project.search.exceptions.AdvancedSearchException;
+import ex.org.project.search.exceptions.OpenSearchException;
 import ex.org.project.search.models.FacetDTO;
-
 import ex.org.project.search.models.OpensearchIndices;
 import ex.org.project.search.models.SearchQuery;
-import ex.org.project.search.exceptions.OpenSearchException;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -37,12 +37,11 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import com.opencsv.CSVWriter;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
-import java.util.*;
 import java.io.StringWriter;
+import java.util.*;
 
 @Slf4j
 @Service

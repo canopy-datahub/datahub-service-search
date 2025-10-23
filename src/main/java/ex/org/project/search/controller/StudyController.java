@@ -2,9 +2,9 @@ package ex.org.project.search.controller;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ex.org.project.search.service.StudyService;
 import ex.org.project.search.models.FacetDTO;
 import ex.org.project.search.models.SearchQuery;
+import ex.org.project.search.service.StudyService;
 import ex.org.project.search.util.RequestValidator;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;

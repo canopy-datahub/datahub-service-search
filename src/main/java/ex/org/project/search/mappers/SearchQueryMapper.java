@@ -1,7 +1,7 @@
 package ex.org.project.search.mappers;
 
-import ex.org.project.search.models.SearchQuery;
 import ex.org.project.search.models.SearchLog;
+import ex.org.project.search.models.SearchQuery;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
