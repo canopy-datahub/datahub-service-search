@@ -58,7 +58,7 @@ class StudySearchImplTests {
     }
 
     private OpensearchIndices getOpensearchIndices(){
-        return new OpensearchIndices("study_index", "auto_index");
+        return new OpensearchIndices("study_index", "auto_index", "variable_search");
     }
 
 
