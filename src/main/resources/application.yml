@@ -105,7 +105,6 @@ query:
     - "study_population_focus_array"
     - "study_variables_array"
   sorting-fields:
-    phs: phs.keyword
     title: title.keyword
     center: center.keyword
     relevance: _score
@@ -133,9 +132,9 @@ variable-query:
     - "study_name"
     - "datatype"
   sorting-fields:
-    variable: variable.keyword
-    variable_label: variable_label.keyword
-    study_name: study_name.keyword
+    id: variable.keyword
+    name: variable_label.keyword
+    datatype: datatype.keyword
     relevance: _score
 
 apis:
