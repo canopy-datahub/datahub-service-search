@@ -168,10 +168,6 @@ opensearch:
   scheme: https
   username: ${SEARCH_USERNAME}
   password: ${SEARCH_PASSWORD}
-  index:
-    studies: study_search
-    autocomplete: study_autocomplete_v001
-    variables: variable_search
 
 logging:
   pattern:
