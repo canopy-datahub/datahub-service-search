@@ -47,6 +47,7 @@ opensearch:
   index:
     studies: study_search
     autocomplete: study_autocomplete_v001
+    variables: variable_search
 
 query:
   min-score-ratio: 0.2
@@ -104,9 +105,36 @@ query:
     - "study_population_focus_array"
     - "study_variables_array"
   sorting-fields:
-    phs: phs.keyword
     title: title.keyword
     center: center.keyword
+    relevance: _score
+
+variable-query:
+  min-score-ratio: 0.2
+  exact-fields:
+    variable: 2.0
+    variable_label: 1.5
+    section: 1.0
+    study_name: 1.0
+    datatype: 1.0
+  fuzzy-fields:
+    variable: 1.6
+    variable_label: 1.2
+    section: 0.8
+    study_name: 0.8
+  partial-fields:
+    variable: 1.5
+    variable_label: 1.0
+    section: 0.5
+    study_name: 0.5
+  aggregation-fields:
+    - "section"
+    - "study_name"
+    - "datatype"
+  sorting-fields:
+    id: variable.keyword
+    name: variable_label.keyword
+    datatype: datatype.keyword
     relevance: _score
 
 apis:
@@ -140,9 +168,6 @@ opensearch:
   scheme: https
   username: ${SEARCH_USERNAME}
   password: ${SEARCH_PASSWORD}
-  index:
-    studies: study_search
-    autocomplete: study_autocomplete_v001
 
 logging:
   pattern:
@@ -175,6 +200,7 @@ opensearch:
   index:
     studies: study_search
     autocomplete: study_autocomplete_v001
+    variables: variable_search
 
 logging:
   pattern:

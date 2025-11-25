@@ -49,7 +49,7 @@ public class OpensearchConfig {
 
     @Bean
     public OpensearchIndices OpensearchIndices(){
-        return new OpensearchIndices(index.get("studies"), index.get("autocomplete"));
+        return new OpensearchIndices(index.get("studies"), index.get("autocomplete"), index.get("variables"));
     }
 
 }
