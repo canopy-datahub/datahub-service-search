@@ -60,7 +60,6 @@ query:
     types: 2.0
     source: 2.0
     topics: 2.0
-    phs: 1.0
     study_population_focus: 2.0
     study_variables: 1.0
     institutes_supporting_study: 0.5
