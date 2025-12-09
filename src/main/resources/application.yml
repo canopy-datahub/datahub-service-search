@@ -10,7 +10,7 @@ spring:
     log-resolved-exception: false
 
 server:
-  port: 8081
+  port: 8080
 
 logging:
   level:
@@ -177,7 +177,7 @@ logging:
 
 spring:
   config:
-    # import: aws-secretsmanager:application_dev
+    import: aws-secretsmanager:application_dev
     activate:
       on-profile: dev
   security:
