@@ -2,9 +2,7 @@ package ex.org.project.search.service;
 
 import ex.org.project.search.config.QueryConfiguration;
 import ex.org.project.search.models.OpensearchIndices;
-import ex.org.project.search.service.SearchQueryLogger;
-import ex.org.project.search.service.StudyServiceImpl;
-import org.elasticsearch.client.RestHighLevelClient;
+import org.opensearch.client.RestHighLevelClient;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
