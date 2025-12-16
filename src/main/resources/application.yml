@@ -38,16 +38,16 @@ management:
       exposure:
         include: health,shutdown
 
-opensearch:
-  hostname: ${opensearch.hostname}
-  port: ${opensearch.port}
-  scheme: ${opensearch.scheme}
-  username: ${opensearch.username}
-  password: ${opensearch.password}
-  index:
-    studies: study_search
-    autocomplete: study_autocomplete_v001
-    variables: variable_search
+# opensearch:
+#   hostname: ${opensearch.hostname}
+#   port: ${opensearch.port}
+#   scheme: ${opensearch.scheme}
+#   username: ${opensearch.username}
+#   password: ${opensearch.password}
+#   index:
+#     studies: study_search
+#     autocomplete: study_autocomplete_v001
+#     variables: variable_search
 
 query:
   min-score-ratio: 0.2
@@ -147,6 +147,7 @@ database:
   host: ${host}
   port: ${port}
   db-name: ${dbname}
+  db-driver-class-name: ${dbDriverClassName}
 
 ---
 # LOCAL
@@ -192,8 +193,8 @@ management:
 
 opensearch:
   hostname: ${SEARCH_HOST}
-  port: 9200
-  scheme: http
+  port: 443
+  scheme: https
   username: ${SEARCH_USERNAME}
   password: ${SEARCH_PASSWORD}
   index:
@@ -213,6 +214,21 @@ spring:
     import: aws-secretsmanager:application_test
     activate:
       on-profile: test
+  security:
+    user:
+      name: ${DATAHUB_SPRING_MANAGEMENT_USER}
+      password: ${DATAHUB_SPRING_MANAGEMENT_PASSWORD}
+
+opensearch:
+  hostname: ${SEARCH_HOST}
+  port: 443
+  scheme: https
+  username: ${SEARCH_USERNAME}
+  password: ${SEARCH_PASSWORD}
+  index:
+    studies: study_search
+    autocomplete: study_autocomplete_v001
+    variables: variable_search
 
 logging:
   pattern:
@@ -226,6 +242,21 @@ spring:
     import: aws-secretsmanager:application_prod
     activate:
       on-profile: prod
+  security:
+    user:
+      name: ${DATAHUB_SPRING_MANAGEMENT_USER}
+      password: ${DATAHUB_SPRING_MANAGEMENT_PASSWORD}
+
+opensearch:
+  hostname: ${SEARCH_HOST}
+  port: 443
+  scheme: https
+  username: ${SEARCH_USERNAME}
+  password: ${SEARCH_PASSWORD}
+  index:
+    studies: study_search
+    autocomplete: study_autocomplete_v001
+    variables: variable_search
 
 logging:
   pattern:
