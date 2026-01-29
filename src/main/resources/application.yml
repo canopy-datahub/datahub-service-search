@@ -178,7 +178,7 @@ logging:
 
 spring:
   config:
-    import: aws-secretsmanager:application_dev
+    import: aws-secretsmanager:${AWS_SECRET_NAME}
     activate:
       on-profile: dev
   security:
@@ -211,7 +211,7 @@ logging:
 
 spring:
   config:
-    import: aws-secretsmanager:application_test
+    import: aws-secretsmanager:${AWS_SECRET_NAME}
     activate:
       on-profile: test
   security:
@@ -239,7 +239,7 @@ logging:
 
 spring:
   config:
-    import: aws-secretsmanager:application_prod
+    import: aws-secretsmanager:${AWS_SECRET_NAME}
     activate:
       on-profile: prod
   security:
