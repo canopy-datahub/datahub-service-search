@@ -1,6 +1,8 @@
-# Search
+# Search Service
 
-Spring Boot 3 microservice for Data Hub 3.0. It is running on Java 17.
+Spring Boot 3 microservice for Canopy. It is running on Java 17.
+
+Provides full-text and faceted search functionality across studies and variables using OpenSearch.
 
 # Install and Run
 
@@ -8,15 +10,15 @@ Spring Boot 3 microservice for Data Hub 3.0. It is running on Java 17.
 
 ### Local
 
-There are a few environment variable that need to be set:
+There are a few environment variables that need to be set:
 * SEARCH_USERNAME
-  * Open Search username for basic auth
+  * OpenSearch username for basic auth
 * SEARCH_PASSWORD
-  * Open Search password for basic auth
+  * OpenSearch password for basic auth
 * SPRING_PROFILES_ACTIVE
   * This should be set to 'local'
 * HostURL
-  * hostname of the  data hub system
+  * hostname of the Canopy frontend
 
 I typically just set these via my environment variables in IntelliJ.
 
@@ -33,19 +35,19 @@ mvn spring-boot:run
 
 If running locally, AWS CLI needs to be installed and configured.
 
-There are a few environment variable that need to be set in AWS Secrets Manager:
+There are a few environment variables that need to be set in AWS Secrets Manager:
 * opensearch.hostname
-    * Open Search hostname / url
+    * OpenSearch hostname / url
 * opensearch.port
-    * Port on which Open Search is accepting connections
+    * Port on which OpenSearch is accepting connections
 * opensearch.scheme
-    * Scheme type on which Open Search is accepting connections
+    * Scheme type on which OpenSearch is accepting connections
 * opensearch.username
-    * Open Search username for basic auth
+    * OpenSearch username for basic auth
 * opensearch.password
-    * Open Search password for basic auth
+    * OpenSearch password for basic auth
 * HostURL
-  * hostname of the data hub system
+  * hostname of the Canopy frontend
 
 In a specific instance, the only environment variable that needs to be set is:
 * SPRING_PROFILES_ACTIVE
