@@ -8,6 +8,13 @@ spring:
       path: /api/search/v1
     log-request-details: false
     log-resolved-exception: false
+  # OAuth2 JWT configuration
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${DATAHUB_KEYCLOAK_ISSUER_URI}
+          jwk-set-uri: ${DATAHUB_KEYCLOAK_JWK_SET_URI}
 
 server:
   port: 8080
