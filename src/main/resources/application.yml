@@ -4,8 +4,6 @@ spring:
   profiles:
     active: dev
   mvc:
-    servlet:
-      path: /api/search/v1
     log-request-details: false
     log-resolved-exception: false
   # OAuth2 JWT configuration
@@ -18,6 +16,8 @@ spring:
 
 server:
   port: 8080
+  servlet:
+    context-path: /api/search/v1
 
 logging:
   level:
