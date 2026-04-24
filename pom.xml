@@ -8,11 +8,11 @@
     <version>3.2.5</version>
     <relativePath/>
   </parent>
-  <groupId>ex.org.project</groupId>
-  <artifactId>datahub-service-search</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>DataHub Search Service</name>
-  <description>DataHub Search Service</description>
+  <groupId>org.canopyplatform</groupId>
+  <artifactId>canopy-service-search</artifactId>
+  <version>0.0.2-SNAPSHOT</version>
+  <name>Canopy DataHub Search Service</name>
+  <description>Canopy DataHub Search Service</description>
   <properties>
     <java.version>17</java.version>
   </properties>
