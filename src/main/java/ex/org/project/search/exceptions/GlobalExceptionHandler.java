@@ -6,13 +6,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 @Slf4j
-@RestController
 @ControllerAdvice
-public class RestResponseEntityExceptionHandler {
+public class GlobalExceptionHandler {
 
     @ExceptionHandler
     public final ResponseEntity<ExceptionResponseDTO> handleOpenSearchException(OpenSearchException e){
