@@ -2,7 +2,7 @@ FROM amazoncorretto:17-alpine
 EXPOSE 8080
 
 ARG CERT
-ARG JAR_FILE=target/datahub-service-search-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/canopy-service-search-0.0.2-SNAPSHOT.jar
 
 # Install cURL to perform ECS health check
 RUN apk add curl
