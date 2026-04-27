@@ -22,7 +22,7 @@ server:
 logging:
   level:
     root: warn
-    ex.org.project.search:
+    org.canopyplatform.canopy.searchservice:
       SearchApplication: info
     org.springframework.web.servlet:
       DispatcherServlet: trace
