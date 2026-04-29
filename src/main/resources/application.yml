@@ -11,8 +11,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: ${DATAHUB_KEYCLOAK_ISSUER_URI}
-          jwk-set-uri: ${DATAHUB_KEYCLOAK_JWK_SET_URI}
+          issuer-uri: ${CANOPY_KEYCLOAK_ISSUER_URI}
+          jwk-set-uri: ${CANOPY_KEYCLOAK_JWK_SET_URI}
 
 server:
   port: 8081
@@ -190,8 +190,8 @@ spring:
       on-profile: dev
   security:
     user:
-      name: ${DATAHUB_SPRING_MANAGEMENT_USER}
-      password: ${DATAHUB_SPRING_MANAGEMENT_PASSWORD}
+      name: ${CANOPY_SPRING_MANAGEMENT_USER}
+      password: ${CANOPY_SPRING_MANAGEMENT_PASSWORD}
 
 management:
   endpoint:
@@ -223,8 +223,8 @@ spring:
       on-profile: test
   security:
     user:
-      name: ${DATAHUB_SPRING_MANAGEMENT_USER}
-      password: ${DATAHUB_SPRING_MANAGEMENT_PASSWORD}
+      name: ${CANOPY_SPRING_MANAGEMENT_USER}
+      password: ${CANOPY_SPRING_MANAGEMENT_PASSWORD}
 
 opensearch:
   hostname: ${SEARCH_HOST}
@@ -251,8 +251,8 @@ spring:
       on-profile: prod
   security:
     user:
-      name: ${DATAHUB_SPRING_MANAGEMENT_USER}
-      password: ${DATAHUB_SPRING_MANAGEMENT_PASSWORD}
+      name: ${CANOPY_SPRING_MANAGEMENT_USER}
+      password: ${CANOPY_SPRING_MANAGEMENT_PASSWORD}
 
 opensearch:
   hostname: ${SEARCH_HOST}
